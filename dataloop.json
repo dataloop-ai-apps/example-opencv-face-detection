@@ -1,0 +1,72 @@
+{
+    "version": "1.0.4",
+    "creator": "or@dataloop.ai",
+    "name": "opencv-face-detection",
+    "displayName": "Opencv face Detection",
+    "description": "Detect all the faces in a given item",
+    "categories": [
+        "opencv"
+    ],
+    "source": {
+        "type": "git",
+        "repo": "https://github.com/dataloop-ai-apps/opencv-face-detection.git",
+        "tag": "v1.0.0"
+    },
+    "components": {
+        "toolbars": [
+            {
+                "displayName": "Detect Face",
+                "invoke": {
+                    "type": "function",
+                    "namespace": "face-detector.predict"
+                },
+                "icon": "icon-dl-edit",
+                "location": "itemMenu"
+            }
+        ],
+        "modules": [
+            {
+                "name": "face-detector",
+                "initInputs": [],
+                "functions": [
+                    {
+                        "name": "predict",
+                        "displayName": "predict",
+                        "input": [
+                            {
+                                "name": "item",
+                                "type": "Item"
+                            }
+                        ],
+                        "output": [
+                            {
+                                "name": "output",
+                                "type": "Item"
+                            }
+                        ]
+                    }
+                ],
+                "entryPoint": "modules/face_detection.py",
+                "className": "face_detector"
+            }
+        ],
+        "services": [
+            {
+                "name": "face-detector",
+                "moduleName": "face-detector",
+                "runtime": {
+                    "podType": "regular-xs",
+                    "runnerImage": "dataloopai/dtlpy-agent:cpu.py3.8.opencv4.7",
+                    "numReplicas": 1,
+                    "concurrency": 10,
+                    "autoscaler": {
+                        "type": "rabbitmq",
+                        "minReplicas": 0,
+                        "maxReplicas": 1,
+                        "queueLength": 10
+                    }
+                }
+            }
+        ]
+    }
+}
