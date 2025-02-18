@@ -1,16 +1,21 @@
-{
-    "version": "1.0.4",
-    "creator": "or@dataloop.ai",
+{   
+    "displayName": "OpenCV Face Detection",
     "name": "opencv-face-detection",
-    "displayName": "Opencv face Detection",
-    "description": "Detect all the faces in a given item",
-    "categories": [
-        "opencv"
-    ],
-    "source": {
+    "description": "Detect all the faces in a given item.",
+    "version": "1.0.4",
+    "scope": "project",
+    "attributes": {
+        "Category": "Application",
+        "Provider": "Dataloop",
+        "Deployed By": "Dataloop",
+        "Application Type": "Function",
+        "Media Type": ["Image"],
+        "License": "Apache 2.0"
+    },
+    "codebase": {
         "type": "git",
-        "repo": "https://github.com/dataloop-ai-apps/opencv-face-detection.git",
-        "tag": "v1.0.0"
+        "gitUrl": "https://github.com/dataloop-ai-apps/opencv-face-detection.git",
+        "gitTag": "1.0.4"
     },
     "components": {
         "toolbars": [
@@ -46,8 +51,8 @@
                         ]
                     }
                 ],
-                "entryPoint": "modules/face_detection.py",
-                "className": "face_detector"
+                "entryPoint": "face_detection.py",
+                "className": "ServiceRunner"
             }
         ],
         "services": [

@@ -1,7 +1,7 @@
 import dtlpy as dl
 import subprocess
 
-project = dl.projects.get('Face Detection')
+project = dl.projects.get(project_name='MyProject')
 
 # bump patch version
 subprocess.check_call('bumpversion patch --allow-dirty', shell=True)
