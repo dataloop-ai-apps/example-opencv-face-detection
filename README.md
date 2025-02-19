@@ -1,6 +1,6 @@
 # Face Detection App
 
-Welcome to the Face Detection App repository, an application designed to showcase the capabilities of the Dataloop platform in detecting faces using OpenCV. This solution is available under the `Applications` tab in the Dataloop Marketplace.
+Welcome to the Face Detection App repository, a simple example application that demonstrates how to add a custom option to a toolbar menu in the Dataloop platform. This app uses OpenCV for face detection. To install the app, you'll need to run the `creation.py` script which will publish and install the app in your Dataloop project.
 
 ## Table of Contents
 
@@ -22,12 +22,34 @@ The Face Detection App utilizes OpenCV to detect faces in images. It provides a 
 
 ## Installation
 
-To install the Face Detection App:
+To install the Face Detection App using the Dataloop SDK, follow these steps:
 
-1. Navigate to the **Marketplace** on the Dataloop platform.
-2. Search for the "OpenCV Face Detection" application under the **Applications** tab.
-3. Click on **Install** to add the app to your project.
-4. Once installed, you can access the face detection functionality through the item menu.
+1. **Install the Dataloop SDK**: Ensure you have the Dataloop SDK installed. You can install it using pip:
+   ```bash
+   pip install dtlpy
+   ```
+
+2. **Log in to Dataloop**: Open a Python environment and log in to your Dataloop account:
+   ```python
+   import dtlpy as dl
+   dl.login()
+   ```
+
+3. **Run the `creation.py` Script**: This script automates the process of publishing and installing the app:
+   ```bash
+   python creation.py
+   ```
+
+   - **Login**: The script starts by logging into the Dataloop platform.
+   - **Project Access**: It retrieves your project using the specified project name.
+   - **Publish DPK**: The script publishes the DPK (Dataloop Package) to the app store using the `dataloop.json` manifest file.
+   - **App Update or Install**:
+     - If the app already exists in your project, it updates the app with the latest DPK version.
+     - If the app is not found, it installs the app in your project.
+
+4. **Access the App**: Once installed, you can access the app through the Applications tab in the Dataloop marketplace. After installation, the detect face detection functionality will be available in the item's right-click menu as shown below:
+
+![Face Detection Toolbar](assets/face-detection-toolbar.png)
 
 ## Components
 

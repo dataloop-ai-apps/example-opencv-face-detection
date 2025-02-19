@@ -1,14 +1,9 @@
 import dtlpy as dl
 import subprocess
 
-dl.setenv('rc')
-dl.login()
-project = dl.projects.get(project_name='Test_J')
+project = dl.projects.get(project_name='MyProject')
 
-# bump patch version
-# subprocess.check_call('bumpversion patch --allow-dirty', shell=True)
-
-# publish dpk to app store
+# Publish dpk to the Marketplace
 dpk = project.dpks.publish(manifest_filepath='dataloop.json')
 
 try:

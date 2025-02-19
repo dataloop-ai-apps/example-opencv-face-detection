@@ -5,13 +5,6 @@ import cv2
 logger = logging.getLogger('face-detector')
 
 
-import dtlpy as dl
-import logging
-import cv2
-
-logger = logging.getLogger('face-detector')
-
-
 class ServiceRunner(dl.BaseServiceRunner):
     def __init__(self):
         # Initialize the face detection model
