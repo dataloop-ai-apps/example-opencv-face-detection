@@ -1,13 +1,10 @@
 import dtlpy as dl
 import subprocess
 
-project = dl.projects.get('Face Detection')
+project = dl.projects.get(project_name='MyProject')
 
-# bump patch version
-subprocess.check_call('bumpversion patch --allow-dirty', shell=True)
-
-# publish dpk to app store
-dpk = project.dpks.publish()
+# Publish dpk to the Marketplace
+dpk = project.dpks.publish(manifest_filepath='dataloop.json')
 
 try:
     # Update app in project
