@@ -20,6 +20,7 @@
     "components": {
         "toolbars": [
             {
+                "name": "detect-face",
                 "displayName": "Detect Face",
                 "invoke": {
                     "type": "function",
