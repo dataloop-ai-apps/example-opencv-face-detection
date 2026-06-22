@@ -1,6 +1,6 @@
 # Face Detection App
 
-Welcome to the Face Detection App repository, a simple example application that demonstrates how to add a custom option to a toolbar menu in the Dataloop platform. This app uses OpenCV for face detection. To install the app, you'll need to run the `creation.py` script which will publish and install the app in your Dataloop project.
+Welcome to the Face Detection App repository, a simple example application that demonstrates how to add a custom option to a toolbar menu in the DDOE platform. This app uses OpenCV for face detection. To install the app, you'll need to run the `creation.py` script which will publish and install the app in your DDOE project.
 
 ## Table of Contents
 
@@ -13,23 +13,23 @@ Welcome to the Face Detection App repository, a simple example application that 
 
 ## Overview
 
-The Face Detection App utilizes OpenCV to detect faces in images. It provides a simple interface within the Dataloop platform, allowing users to easily apply face detection to images in their datasets. The main objective is to create a button in the item's right-click menu that triggers the face detection functionality, making it convenient for users to detect and annotate faces in their images.
+The Face Detection App utilizes OpenCV to detect faces in images. It provides a simple interface within the DDOE platform, allowing users to easily apply face detection to images in their datasets. The main objective is to create a button in the item's right-click menu that triggers the face detection functionality, making it convenient for users to detect and annotate faces in their images.
 
 ### Key Features
 
 - **Face Detection**: Detect faces in images using OpenCV.
-- **Integration with Dataloop**: Seamlessly integrates with the Dataloop platform for easy deployment and use.
+- **Integration with DDOE**: Seamlessly integrates with the DDOE platform for easy deployment and use.
 
 ## Installation
 
-To install the Face Detection App using the Dataloop SDK, follow these steps:
+To install the Face Detection App using the DDOE SDK, follow these steps:
 
-1. **Install the Dataloop SDK**: Ensure you have the Dataloop SDK installed. You can install it using pip:
+1. **Install the DDOE SDK**: Ensure you have the DDOE SDK installed. You can install it using pip:
    ```bash
    pip install dtlpy
    ```
 
-2. **Log in to Dataloop**: Open a Python environment and log in to your Dataloop account:
+2. **Log in to DDOE**: Open a Python environment and log in to your DDOE account:
    ```python
    import dtlpy as dl
    dl.login()
@@ -40,14 +40,14 @@ To install the Face Detection App using the Dataloop SDK, follow these steps:
    python creation.py
    ```
 
-   - **Login**: The script starts by logging into the Dataloop platform.
+   - **Login**: The script starts by logging into the DDOE platform.
    - **Project Access**: It retrieves your project using the specified project name.
-   - **Publish DPK**: The script publishes the DPK (Dataloop Package) to the app store using the `dataloop.json` manifest file.
+   - **Publish DPK**: The script publishes the DPK (DDOE Package) to the app store using the `dataloop.json` manifest file.
    - **App Update or Install**:
      - If the app already exists in your project, it updates the app with the latest DPK version.
      - If the app is not found, it installs the app in your project.
 
-4. **Access the App**: Once installed, you can access the app through the Applications tab in the Dataloop marketplace. After installation, the detect face detection functionality will be available in the item's right-click menu as shown below:
+4. **Access the App**: Once installed, you can access the app through the Applications tab in the DDOE marketplace. After installation, the detect face detection functionality will be available in the item's right-click menu as shown below:
 
 ![Face Detection Toolbar](assets/face-detection-toolbar.png)
 
@@ -64,7 +64,7 @@ The solution comprises several key components as defined in the `dataloop.json` 
 The `face_detection.py` script is responsible for managing the app's face detection functionality:
 
 - **Face Detection**: Utilizes OpenCV to detect faces in images.
-- **Annotation**: Automatically annotates detected faces in the Dataloop platform and upload the bounding boxes to the item.
+- **Annotation**: Automatically annotates detected faces in the DDOE platform and upload the bounding boxes to the item.
 
 ## Configuration Overview
 
@@ -92,4 +92,4 @@ The `dataloop.json` file serves as the core configuration for the app. It define
 
 ## Additional Information
 
-For more details on using the Face Detection App, refer to the Dataloop platform documentation. Contributions and feedback are welcome to help improve this app.
+For more details on using the Face Detection App, refer to the DDOE platform documentation. Contributions and feedback are welcome to help improve this app.

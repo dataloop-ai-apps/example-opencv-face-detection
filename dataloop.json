@@ -6,8 +6,8 @@
     "scope": "project",
     "attributes": {
         "Category": "Application",
-        "Provider": "Dataloop",
-        "Deployed By": "Dataloop",
+        "Provider": "DDOE",
+        "Deployed By": "DDOE",
         "Application Type": "Function",
         "Media Type": ["Image"],
         "License": "Apache 2.0"
